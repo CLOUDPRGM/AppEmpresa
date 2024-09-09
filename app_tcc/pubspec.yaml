@@ -17,3 +17,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+  - imagem/DEV.png
+  - imagem/Union.png
+  - imagem/READS.png
+  - imagem/dev reads.png
