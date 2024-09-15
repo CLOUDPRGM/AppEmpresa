@@ -1,4 +1,4 @@
-import 'package:app_tcc/Pagini.dart';
+import 'package:app_tcc/pagini.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,8 +27,8 @@ class MainApp extends StatelessWidget {
              
               ),              
               
-              SizedBox(height:100),
-                Container(
+              const SizedBox(height:100),
+                SizedBox(
               width: 300, // Largura do botão
               height: 50, // Altura do botão
               
@@ -43,7 +43,7 @@ class MainApp extends StatelessWidget {
                   // Define as bordas do botão como arredondadas
                   // Define o estilo do texto do botão
                   
-                  textStyle: TextStyle(fontSize: 16),
+                  textStyle: const TextStyle(fontSize: 16),
                                       
                 ),
                 // Define a ação ao pressionar o botão
@@ -51,12 +51,12 @@ class MainApp extends StatelessWidget {
                   // Navega para a página MenuPag
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Pagini()),
+                    MaterialPageRoute(builder: (context) => const Pagini()),
                     
                   );
                 },
                     label: const Text('Continuar'),
-                    icon: Icon(Icons.search),
+                    icon: const Icon(Icons.search),
                 // Texto do botão
 
               ),
