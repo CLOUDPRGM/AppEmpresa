@@ -1,3 +1,4 @@
+import 'package:app_tcc/paglivro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -55,10 +56,9 @@ class Pagini extends StatefulWidget {
                //Formulário para preencher o nome
                const SizedBox(height: 40),
                TextFormField(
-                  style: const TextStyle(color: Colors.black, fontSize: 20 ),
+                  style: const TextStyle(color: Colors.black, fontSize: 15 ),
                 decoration: const InputDecoration(
                   contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 10), // Set content padding to 8 vertical, 12 horizontal
-                  icon:  Icon(Icons.person),
                   hintText: 'Entrada de texto',
                   labelText: 'Nome',
                   border: OutlineInputBorder(borderRadius: BorderRadius.all(
@@ -104,7 +104,7 @@ class Pagini extends StatefulWidget {
                       Cliente n = Cliente(nme);
 
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Pagini(),
+                      MaterialPageRoute(builder: (context) => const PagLivro(),
 
                       settings: RouteSettings(
                           arguments: n
