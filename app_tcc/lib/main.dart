@@ -22,11 +22,8 @@ class MainApp extends StatelessWidget {
                    //Alinhamento centralizado
                     children: <Widget>[  
             // This next line does the trick
-             Container(
-                child: Image.asset('imagem/dev reads.png'), 
+                 Image.asset('imagem/dev reads.png'), 
              
-              ),              
-              
               const SizedBox(height:100),
                 SizedBox(
               width: 300, // Largura do botão

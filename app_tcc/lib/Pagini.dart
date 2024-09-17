@@ -51,17 +51,26 @@ class Pagini extends StatefulWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white
                 ),
                ),    
+               
+               //Formulário para preencher o nome
                const SizedBox(height: 40),
                TextFormField(
+                  style: const TextStyle(color: Colors.black, fontSize: 20 ),
                 decoration: const InputDecoration(
+                  contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 10), // Set content padding to 8 vertical, 12 horizontal
                   icon:  Icon(Icons.person),
                   hintText: 'Entrada de texto',
                   labelText: 'Nome',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(borderRadius: BorderRadius.all(
+                  Radius.circular(100.0),
+                ),
+                    borderSide: BorderSide(
+                        width: 0.10,
+                   ),
+                ),                  
                   iconColor: Colors.white,
                   labelStyle: TextStyle(color: Colors.black),
                   filled: true, fillColor: Colors.white,
-
                 ),
                  keyboardType: TextInputType.name,
                    inputFormatters: <TextInputFormatter>[
@@ -72,6 +81,8 @@ class Pagini extends StatefulWidget {
                             nme = value;
                           },
               ),
+             
+             //Botão para enviar os dados
              const SizedBox(height: 40),
             Center(
               child: SizedBox(
