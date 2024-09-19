@@ -1,5 +1,5 @@
 
-import 'package:app_tcc/main.dart';
+import 'package:app_tcc/pagLivro2.dart';
 import 'package:app_tcc/pagini.dart';
 import 'package:flutter/material.dart';
 
@@ -26,18 +26,18 @@ class PagLivro extends StatelessWidget {
                    mainAxisAlignment: MainAxisAlignment.center, 
                    //Alinhamento centralizado
                     children: <Widget>[  
-                      SizedBox(height: 20,
+                      const SizedBox(height: 20,
                       width: 10),
                      Image.asset('imagem/logo.png', color: Colors.white,), 
 //Espaçamento entre imagem ao texto
-                    Text("Bem-Vindo, "+ n.nome + "!"  , style: TextStyle( color: const Color.fromARGB(255, 3, 219, 10),fontSize: 30)), //Texto junto ao dado envidado do nome
+                    Text("Bem-Vindo, ${n.nome}!"  , style: const TextStyle( color: Color.fromARGB(255, 3, 219, 10),fontSize: 30)), //Texto junto ao dado envidado do nome
                  
-                  SizedBox(height:20),
+                  const SizedBox(height:20),
  FloatingActionButton(
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MainApp()),
+                    MaterialPageRoute(builder: (context) => const DevReadsApp()),
                   );
                 },
                 child: const Text('Voltar',
