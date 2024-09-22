@@ -91,7 +91,7 @@ class Pagini extends StatefulWidget {
                 child: ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: const Color.fromARGB(82, 10, 10, 5),
+                    backgroundColor: const Color.fromARGB(82, 212, 206, 206),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(70),
                     ),
@@ -114,8 +114,7 @@ class Pagini extends StatefulWidget {
                     );
                     
                   },
-                    label: const Text('Continuar'),
-                    icon: const Icon(Icons.person),
+                    label: const Text('ENTRAR'),
                 ),
               ),
              ),

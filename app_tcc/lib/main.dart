@@ -52,8 +52,8 @@ class MainApp extends StatelessWidget {
                     
                   );
                 },
-                    label: const Text('Continuar'),
-                    icon: const Icon(Icons.search),
+                    icon: const Icon(Icons.arrow_forward_ios_sharp),
+                    label: const Text('CONTINUAR'),
                 // Texto do botão
 
               ),
