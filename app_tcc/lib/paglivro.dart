@@ -2,6 +2,16 @@ import 'package:app_tcc/main.dart';
 import 'package:app_tcc/pagini.dart';
 import 'package:flutter/material.dart';
 
+class Livro{
+
+final String image;
+final String title;
+final String preco;
+
+Livro({required this.image, required this.title, required this.preco});
+}
+
+
 void main() {
   runApp(const MaterialApp(
     title: 'App',
@@ -32,7 +42,7 @@ class PagLivro2 extends State<PagLivro>{
 
   @override
   Widget build(BuildContext context) {
-        final n = ModalRoute.of(context)!.settings.arguments as Cliente;
+        final n = ModalRoute.of(context)!.settings.arguments as Cliente; //Chegada do nome 
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -45,7 +55,7 @@ class PagLivro2 extends State<PagLivro>{
           children: [
          Image.asset('imagem/logo.png', color: Colors.white),    
           Text(textAlign: TextAlign.center,
-          "Bem-Vindo, ${n.nome}!",          
+          "Bem-Vindo, ${n.nome}!", //A variável do nome do Cliente aparece aqui         
           style: const TextStyle( 
           color: Color.fromARGB(255, 3, 219, 10),fontSize: 30,)), //Texto junto ao dado envidado do nome
              const Padding(
@@ -55,11 +65,13 @@ class PagLivro2 extends State<PagLivro>{
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey[800],
+                  color: const Color.fromARGB(255, 66, 66, 66),
                   borderRadius: BorderRadius.circular(10),
+                  
                 ),
-                child: const TextField(
-                  decoration: InputDecoration(
+                child:  const TextField(
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
                     prefixIcon: Icon(Icons.search, color: Colors.white),
                     hintText: 'Buscar por Nome, Autores ou Categorias',
                     hintStyle: TextStyle(color: Colors.white54),
@@ -68,13 +80,13 @@ class PagLivro2 extends State<PagLivro>{
                 ),
               ),
             ),
-            const SizedBox(height: 20),
-            const SectionTitle(title: 'POPULARES'),
-            const BooksGrid(),
-            const SectionTitle(title: 'PROMOÇÕES'),
-            const BooksGrid(),
-            const SectionTitle(title: 'LIVROS DA SEMANA'),
-            const BooksGrid(),
+              const SizedBox(height: 20),
+              const SectionTitle(title: 'POPULARES'),
+              const BooksGrid(),
+              const SectionTitle(title: 'PROMOÇÕES'),
+              const BooksGrid(),
+              const SectionTitle(title: 'LIVROS DA SEMANA'),
+              const BooksGrid(),
           ],
         ),
       ),
@@ -82,17 +94,17 @@ class PagLivro2 extends State<PagLivro>{
         backgroundColor: Colors.green,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white54,
-           onTap: (int index) {
+           onTap: (int index) { //É como se fosse o onpression
           setState(() {
           });
           // Código para execução da troca de tela
           switch (index) {
             case 0:
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const MainApp())); // Caminho pra tela "Cultura"
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const MainApp())); // Caminho pra tela "Home"
             break;
             
             case 1:
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const Pagini())); // Caminho pra tela "Home"
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Pagini())); // Caminho pra tela "Categoria"
             break;
           }
           },
@@ -109,7 +121,6 @@ class PagLivro2 extends State<PagLivro>{
       ),
     );
   }
-
 }
 class SectionTitle extends StatelessWidget {
   final String title;
@@ -131,8 +142,33 @@ class SectionTitle extends StatelessWidget {
   }
 }
 
-class BooksGrid extends StatelessWidget {
-  const BooksGrid({super.key});
+class BooksGrid extends StatefulWidget {
+   const BooksGrid({super.key});
+
+   @override
+   State<BooksGrid> createState() => BooksGrid2();
+
+
+}
+
+class BooksGrid2 extends State<BooksGrid> {
+//variaveis locais para receber o texto
+    String livras = '';
+
+   
+   final List<Livro> livros = [ //Carregar os livros
+
+    Livro(image: 'imagem/img1.png', title: 'Codigo Limpo', preco:'R\$ 85,00'),
+    Livro(image: 'imagem/img2.png', title: 'A Segunda era das Máquinas', preco:'R\$ 490,00'),
+    Livro(image: 'imagem/img3.png', title: 'Como Criar Uma Mente', preco: 'R\$ 67,45'),
+
+
+  ];
+  @override
+  void initState(){
+    super.initState();
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -144,29 +180,44 @@ class BooksGrid extends StatelessWidget {
         physics: const NeverScrollableScrollPhysics(),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3, //Quantidade de linhas
-          crossAxisSpacing: 10,
+          crossAxisSpacing: 10, //Daqui o espaçamento entre as divisorias
           mainAxisSpacing: 10,
           childAspectRatio: 0.6,
         ),
-        itemCount: 3, // Placeholder for 4 books //Quantidade de livrs
+        itemCount: livros.length, // Placeholder que pega a quantidade de livros disponíveis
         itemBuilder: (context, index) {
-          return Container(
+                           
+                           /* onPressed: () {
+                              Livro n =
+                              Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const PagLivro()));
+                            };*/
+
+           // ignore: non_constant_identifier_names
+           final Livro = livros[index]; //Aqui onde o App acessará os livros na classe
+          return Container( //Retornar para aparecer na tela
             decoration: BoxDecoration(
               color: Colors.white24,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: const Column(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [ 
-                Icon(Icons.book, color: Colors.white, size: 50),
-                SizedBox(height: 10),
-                Text(
-                  'NOME LIVRO',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                const Icon(Icons.book, color: Colors.white, size: 50),
+                const SizedBox(height: 10),
+                Image.asset(Livro.image,
+                height: 300,
+                width: 200,
                 ),
-              Text(
-                  'R\$ 00,00',
-                  style: TextStyle(color: Colors.white, fontSize: 14),
+                const SizedBox(height:20),
+                Text(
+                  textAlign: TextAlign.center,
+                  Livro.title, //Pega o título
+                  style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold, ),
+                ),
+               Text(
+                  Livro.preco, //Pega o preço
+                  style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
                 ),  
               ],
             ),  
