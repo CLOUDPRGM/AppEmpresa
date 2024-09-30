@@ -1,3 +1,4 @@
+import 'package:app_tcc/detalhelivro.dart';
 import 'package:app_tcc/main.dart';
 import 'package:app_tcc/pagini.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,15 @@ final String title;
 final String preco;
 
 Livro({required this.image, required this.title, required this.preco});
+}
+
+class Livro2{
+
+final String image;
+final String title;
+final String preco;
+
+Livro2({required this.image, required this.title, required this.preco});
 }
 
 
@@ -153,10 +163,9 @@ class BooksGrid extends StatefulWidget {
 
 class BooksGrid2 extends State<BooksGrid> {
 //variaveis locais para receber o texto
-    String livras = '';
 
    
-   final List<Livro> livros = [ //Carregar os livros
+   final List livros = [ //Carregar os livros
 
     Livro(image: 'imagem/img1.png', title: 'Codigo Limpo', preco:'R\$ 85,00'),
     Livro(image: 'imagem/img2.png', title: 'A Segunda era das Máquinas', preco:'R\$ 490,00'),
@@ -185,14 +194,8 @@ class BooksGrid2 extends State<BooksGrid> {
           childAspectRatio: 0.6,
         ),
         itemCount: livros.length, // Placeholder que pega a quantidade de livros disponíveis
-        itemBuilder: (context, index) {
-                           
-                           /* onPressed: () {
-                              Livro n =
-                              Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const PagLivro()));
-                            };*/
-
+        itemBuilder: (context, index) {           
+          
            // ignore: non_constant_identifier_names
            final Livro = livros[index]; //Aqui onde o App acessará os livros na classe
           return Container( //Retornar para aparecer na tela
@@ -218,7 +221,27 @@ class BooksGrid2 extends State<BooksGrid> {
                Text(
                   Livro.preco, //Pega o preço
                   style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
-                ),  
+                ), 
+                const SizedBox(height: 10), 
+                TextButton(
+                          style: TextButton.styleFrom(
+                              foregroundColor: Colors.white,
+                              textStyle:
+                                  const TextStyle(fontWeight: FontWeight.bold)),
+                          child:
+                              const Text('Detalhes do Livro'),
+                          onPressed: () {    
+                           
+                            Livro2 liv = Livro2(image: Livro.image, title: Livro.title, preco: Livro.preco);
+            
+                         Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>   const DetalheLivro(),
+                                  settings: RouteSettings(arguments: liv)),
+                            );
+                          },
+                        ),
               ],
             ),  
           );
