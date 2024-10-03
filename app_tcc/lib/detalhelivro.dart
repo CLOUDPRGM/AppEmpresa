@@ -35,10 +35,11 @@ class DetalheLivro2 extends State<DetalheLivro> {
     
             final liv = ModalRoute.of(context)!.settings.arguments as Livro2; //Chegada do nome 
             return  MaterialApp(
-      home: Scaffold(
+      home: Scaffold( 
         backgroundColor: const Color.fromARGB(255, 0, 0, 0),
-         body:  Column( 
+         body:  SingleChildScrollView ( 
           
+          child: Column(
                    //Alinhamento centralizado
                     children: <Widget>[  
                       Image.asset('imagem/logo.png', color: Colors.white),    
@@ -62,6 +63,7 @@ class DetalheLivro2 extends State<DetalheLivro> {
               ]
             ),  
           ),
+          const SizedBox(height: 20),
           Text(
                   textAlign: TextAlign.center,
                   liv.title, //Pega o título
@@ -71,12 +73,12 @@ class DetalheLivro2 extends State<DetalheLivro> {
                   liv.preco, //Pega o preço
                   style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
                 ), 
-       Column(  
-        children: [ 
-           const Padding(
-                        padding: EdgeInsets.all(38.1),
-                        ),
-          BottomNavigationBar(
+        ],
+       ),
+       ),
+                  
+          // A professora alterou navegationBar para fora do 
+                bottomNavigationBar: BottomNavigationBar(
                 backgroundColor: Colors.green,
                 selectedItemColor: Colors.white,
                 unselectedItemColor: Colors.white54,
@@ -105,13 +107,10 @@ class DetalheLivro2 extends State<DetalheLivro> {
          ),
                 ],
               ),
-        ],
-       ),
-              ],
-         
-          ),
         ),
       );
+            
+          
   
 }      
 }

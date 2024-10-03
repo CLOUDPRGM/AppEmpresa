@@ -197,8 +197,10 @@ class BooksGrid2 extends State<BooksGrid> {
         itemBuilder: (context, index) {           
           
            // ignore: non_constant_identifier_names
-           final Livro = livros[index]; //Aqui onde o App acessará os livros na classe
-          return Container( //Retornar para aparecer na tela
+           final Livro = livros[index]; 
+           //Aqui onde o App acessará os livros na classe
+          return
+          Container( //Retornar para aparecer na tela
             decoration: BoxDecoration(
               color: Colors.white24,
               borderRadius: BorderRadius.circular(10),
@@ -206,7 +208,7 @@ class BooksGrid2 extends State<BooksGrid> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [ 
-                const Icon(Icons.book, color: Colors.white, size: 50),
+                //const Icon(Icons.book, color: Colors.white, size: 50),
                 const SizedBox(height: 10),
                 Image.asset(Livro.image,
                 height: 300,
@@ -245,7 +247,6 @@ class BooksGrid2 extends State<BooksGrid> {
               ],
             ),  
           );
-          
         },
       ),
     );
