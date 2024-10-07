@@ -209,20 +209,19 @@ class BooksGrid2 extends State<BooksGrid> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [ 
                 //const Icon(Icons.book, color: Colors.white, size: 50),
-                const SizedBox(height: 10),
                 Image.asset(Livro.image,
-                height: 300,
-                width: 200,
+                height: 100,
+                width: 100,
                 ),
-                const SizedBox(height:20),
+                const SizedBox(height:15),
                 Text(
                   textAlign: TextAlign.center,
                   Livro.title, //Pega o título
-                  style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold, ),
+                  style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
                 ),
                Text(
                   Livro.preco, //Pega o preço
-                  style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                  style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
                 ), 
                 const SizedBox(height: 10), 
                 TextButton(

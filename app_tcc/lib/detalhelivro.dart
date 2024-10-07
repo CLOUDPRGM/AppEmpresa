@@ -66,13 +66,48 @@ class DetalheLivro2 extends State<DetalheLivro> {
           const SizedBox(height: 20),
           Text(
                   textAlign: TextAlign.center,
-                  liv.title, //Pega o título
+                  liv.title,   //Pega o título
                   style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
                 ),
+                const SizedBox(height: 20),
                Text(
-                  liv.preco, //Pega o preço
-                  style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                     "${liv.preco} á vista ou em 1x em 00,00", //Pega o preço
+                  style: const TextStyle(color: Colors.white, fontSize: 20),
                 ), 
+                const SizedBox(height: 20),
+                TextButton(
+      onPressed: () => showDialog<String>(
+        context: context,
+        builder: (BuildContext context) => AlertDialog(
+          title: const Text('Deseja Saber Mais?'),
+          content: const Text('Para saber mais dirija-se ao nosso site!'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () => Navigator.pop(context, 'Cancel'),
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.pop(context, 'Ir para o Site'),
+              child: const Text('Ir para o Site'),
+            ),
+          ],
+        ),
+      ),
+      style: TextButton.styleFrom( 
+      backgroundColor: Colors.green,
+      foregroundColor: Colors.white),
+      child: const Text('Mais Detalhes'),
+    ),
+    const SizedBox(height:20),
+    Row(
+      children: <Widget>[
+        const Expanded(
+          child: Text('Compartilhar:', textAlign: 
+          TextAlign.center, style: 
+          TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+          Expanded(child: Image.asset('imagem/Union.png', height: 20, width: 20))
+      ],
+    )
         ],
        ),
        ),
