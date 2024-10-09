@@ -2,7 +2,8 @@ import 'package:app_tcc/main.dart';
 import 'package:app_tcc/pagini.dart';
 import 'package:app_tcc/paglivro.dart';
 import 'package:flutter/material.dart';
-
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -87,7 +88,15 @@ class DetalheLivro2 extends State<DetalheLivro> {
               child: const Text('Cancel'),
             ),
             TextButton(
-              onPressed: () => Navigator.pop(context, 'Ir para o Site'),
+               onPressed: () async {
+                              const url = 'https://maps.app.goo.gl/L3J5WbzXL8fLYm3r6';
+                              if (await canLaunchUrlString(url)) {
+                                await launch(url);
+                              } else {
+                                throw 'Could not launch $url';
+                              }
+                            },
+
               child: const Text('Ir para o Site'),
             ),
           ],
