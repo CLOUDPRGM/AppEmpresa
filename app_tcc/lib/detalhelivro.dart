@@ -1,8 +1,7 @@
+import 'package:app_tcc/categoria.dart';
 import 'package:app_tcc/main.dart';
-import 'package:app_tcc/pagini.dart';
 import 'package:app_tcc/paglivro.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 void main() {
@@ -106,7 +105,7 @@ class DetalheLivro2 extends State<DetalheLivro> {
                onPressed: () async {
                               const url = 'https://maps.app.goo.gl/L3J5WbzXL8fLYm3r6';
                               if (await canLaunchUrlString(url)) {
-                                await launch(url);
+                                await launchUrlString(url);
                               } else {
                                 throw 'Could not launch $url';
                               }
@@ -223,7 +222,7 @@ const SizedBox(height: 40),
            break;
            
            case 1:
-             Navigator.push(context, MaterialPageRoute(builder: (context) => const Pagini())); // Caminho pra tela "Categoria"
+             Navigator.push(context, MaterialPageRoute(builder: (context) => const Categoria())); // Caminho pra tela "Categoria"
            break;
          }
          },

@@ -1,3 +1,4 @@
+import 'package:app_tcc/categoria.dart';
 import 'package:app_tcc/detalhelivro.dart';
 import 'package:app_tcc/main.dart';
 import 'package:app_tcc/pagini.dart';
@@ -86,6 +87,8 @@ class PagLivro2 extends State<PagLivro>{
              const Padding(
               padding: EdgeInsets.all(16.0),
              ),
+                
+    
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Container(
@@ -129,7 +132,7 @@ class PagLivro2 extends State<PagLivro>{
             break;
             
             case 1:
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const Pagini())); // Caminho pra tela "Categoria"
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Categoria())); // Caminho pra tela "Categoria"
             break;
           }
           },
