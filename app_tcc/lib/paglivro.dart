@@ -8,8 +8,15 @@ class Livro{
 final String image;
 final String title;
 final String preco;
+final String edi;
+final String isbn;
+final String pag;
+final String idioma;
+final String desc;
 
-Livro({required this.image, required this.title, required this.preco});
+Livro({required this.image, required this.title, required this.preco, required this.edi,
+required this.isbn, required this.pag, required this.idioma, 
+required this.desc});
 }
 
 class Livro2{
@@ -17,8 +24,16 @@ class Livro2{
 final String image;
 final String title;
 final String preco;
+final String edi;
+final String isbn;
+final String pag;
+final String idioma;
+final String desc;
 
-Livro2({required this.image, required this.title, required this.preco});
+
+Livro2({required this.image, required this.title, required this.preco, 
+required this.edi, required this.isbn, required this.pag, required this.idioma, 
+required this.desc});
 }
 
 
@@ -167,9 +182,29 @@ class BooksGrid2 extends State<BooksGrid> {
    
    final List livros = [ //Carregar os livros
 
-    Livro(image: 'imagem/img1.png', title: 'Codigo Limpo', preco:'R\$ 85,00'),
-    Livro(image: 'imagem/img2.png', title: 'A Segunda era das Máquinas', preco:'R\$ 490,00'),
-    Livro(image: 'imagem/img3.png', title: 'Como Criar Uma Mente', preco: 'R\$ 67,45'),
+    Livro(image: 'imagem/img1.png', title: 'Codigo Limpo', preco:'R\$ 85,00', 
+    edi: 'AltaBooks', isbn: '9788576082675', pag: '425', idioma: 'Português', 
+    desc:
+    'Mesmo um código ruim pode funcionar. Mas se ele não for limpo,'
+    'pode acabar com uma empresa de desenvolvimento.'
+    'Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito. Mas não precisa ser assim.'),
+    
+    Livro(image: 'imagem/img2.png', title: 'A Segunda era das Máquinas', preco:'R\$ 490,00',  
+    edi: 'AltaBooks', isbn: '9788576089148', pag: '352', idioma: 'Português', 
+    desc: 
+    'Em A Segunda Era das Máquinas, Erik Brynjolfsson e Andrew McAfee, do MIT, ― dois pensadores à frente de seu campo' 
+    '― revelam as forças que promovem a reinvenção de nossas vidas e de nossa economia.' 
+    'Conforme todo o impacto das tecnologias digitais for sentido,'
+    'perceberemos uma riqueza imensa na forma de tecnologias pessoais,'
+    'infraestrutura avançada e acesso quase sem fronteiras aos itens culturais que enriquecem nossas vidas.'),
+    
+    Livro(image: 'imagem/img3.png', title: 'Como Criar Uma Mente', preco: 'R\$ 67,45',  
+    edi: 'EditoraAleph', isbn: '9788576571698', pag: '400', idioma: 'Português', 
+    desc: 
+    'Neste livro, Ray Kurzweil dá um salto em relação às pesquisas sobre IA.'
+    'Ao discutir as tecnologias que permitirão ampliar muitíssimo os poderes da nossa mente'
+    'e a criação de uma superinteligência revolucionária, Como criar uma mente dá outra dimensão ao debate científico,'
+    'projetando um futuro impressionante para a interação entre homem e máquina.'),
 
 
   ];
@@ -233,7 +268,8 @@ class BooksGrid2 extends State<BooksGrid> {
                               const Text('Detalhes do Livro'),
                           onPressed: () {    
                            
-                            Livro2 liv = Livro2(image: Livro.image, title: Livro.title, preco: Livro.preco);
+                            Livro2 liv = Livro2(image: Livro.image, title: Livro.title, preco: Livro.preco, edi: Livro.edi,
+                             isbn: Livro.isbn, pag: Livro.pag, idioma: Livro.idioma, desc: Livro.desc);
             
                          Navigator.push(
                               context,

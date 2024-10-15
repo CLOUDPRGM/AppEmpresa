@@ -71,10 +71,25 @@ class DetalheLivro2 extends State<DetalheLivro> {
                   style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 20),
+                Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
                Text(
-                     "${liv.preco} á vista ou em 1x em 00,00", //Pega o preço
-                  style: const TextStyle(color: Colors.white, fontSize: 20),
-                ), 
+                     liv.preco, //Pega o preço
+                  style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(width:10),
+               const Text(
+                    "á vista", //Pega o preço
+                  style: TextStyle(color: Colors.white, fontSize: 20,),
+                ),
+                        ]
+                ),
+                const Text(
+                     "ou em 1x em 00,00", //Pega o preço
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+            
                 const SizedBox(height: 20),
                 TextButton(
       onPressed: () => showDialog<String>(
@@ -107,20 +122,92 @@ class DetalheLivro2 extends State<DetalheLivro> {
       foregroundColor: Colors.white),
       child: const Text('Mais Detalhes'),
     ),
-    const SizedBox(height:20),
+    const SizedBox(height:30),
+     Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+          const Text('Compartilhar:', 
+          textAlign: TextAlign.center, style: 
+          TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),
+           const SizedBox(height: 10, width: 10,), 
+            Image.asset('imagem/redes.png'),
+      ],
+    ),
+    const SizedBox(height:30),
+     const Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        SizedBox(width: 10),
+          Text('Ficha Técnica', 
+          textAlign: TextAlign.start, style: 
+          TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),
+      ],
+    ),
+    const SizedBox(height: 50),
+    Row(
+    mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        Expanded(child: Image.asset('imagem/editora.png', height: 50, width: 50),
+        ),
+         Expanded(child: Image.asset('imagem/isbn.png', height: 50, width: 50),
+        ),
+        Expanded(child: Image.asset('imagem/paginas.png', height: 50, width: 50),
+        ),
+        Expanded(child: Image.asset('imagem/idioma.png', height: 50, width: 50),
+        )
+      ]
+    ),
+    const SizedBox(height: 10),
+const Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Expanded(child: Text('Editora', textAlign: TextAlign.center,
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+        Expanded(child: Text('ISBN', textAlign: TextAlign.center,
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+        Expanded(child: Text('Páginas', textAlign: TextAlign.center,
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+        Expanded(child: Text('Idioma', textAlign: TextAlign.center,
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+        
+      ]
+    ),
+    const SizedBox(height:5, width: 100),
+  Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Expanded(child: Text( liv.edi, textAlign: TextAlign.center,
+        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+        Expanded(child: Text( liv.isbn, textAlign: TextAlign.center,
+        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+        Expanded(child: Text( liv.pag, textAlign: TextAlign.center,
+        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+        Expanded(child: Text( liv.idioma, textAlign: TextAlign.center,
+        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+        
+      ]
+    ),
+     const SizedBox(height:30),
+     const Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        SizedBox(width: 10),
+          Text('Detalhes', 
+          textAlign: TextAlign.start, style: 
+          TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)),
+      ],
+    ),
+    const SizedBox(height:40),
     Row(
       children: <Widget>[
-        const Expanded(
-          child: Text('Compartilhar:', textAlign: 
-          TextAlign.center, style: 
-          TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
-          Expanded(child: Image.asset('imagem/Union.png', height: 20, width: 20))
-      ],
-    )
-        ],
-       ),
-       ),
-                  
+        Expanded(child: Text( liv.desc, textAlign: TextAlign.justify,
+        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+      ]
+    ),
+const SizedBox(height: 40),
+        ],   
+     ),
+    ),
           // A professora alterou navegationBar para fora do 
                 bottomNavigationBar: BottomNavigationBar(
                 backgroundColor: Colors.green,
