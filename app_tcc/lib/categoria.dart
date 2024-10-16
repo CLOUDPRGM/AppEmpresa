@@ -1,3 +1,4 @@
+import 'package:app_tcc/central.dart';
 import 'package:app_tcc/main.dart';
 import 'package:flutter/material.dart';
 
@@ -386,6 +387,10 @@ const SizedBox(height: 40),
            case 1:
              Navigator.push(context, MaterialPageRoute(builder: (context) => const Categoria())); // Caminho pra tela "Categoria"
            break;
+
+            case 2:
+             Navigator.push(context, MaterialPageRoute(builder: (context) => const Central())); // Caminho pra tela "Categoria"
+           break;
          }
          },
                 items: const [
@@ -395,6 +400,10 @@ const SizedBox(height: 40),
          ),
          BottomNavigationBarItem(
            icon: Icon(Icons.grid_view),
+           label: '',  
+         ),
+         BottomNavigationBarItem(
+           icon: Icon(Icons.person),
            label: '',  
          ),
                 ],

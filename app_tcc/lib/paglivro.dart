@@ -1,4 +1,5 @@
 import 'package:app_tcc/categoria.dart';
+import 'package:app_tcc/central.dart';
 import 'package:app_tcc/detalhelivro.dart';
 import 'package:app_tcc/main.dart';
 import 'package:app_tcc/pagini.dart';
@@ -19,6 +20,8 @@ Livro({required this.image, required this.title, required this.preco, required t
 required this.isbn, required this.pag, required this.idioma, 
 required this.desc});
 }
+ 
+//Ponte da classe Livro
 
 class Livro2{
 
@@ -115,9 +118,14 @@ class PagLivro2 extends State<PagLivro>{
               const BooksGrid(),
               const SectionTitle(title: 'LIVROS DA SEMANA'),
               const BooksGrid(),
-          ],
+
+             const SizedBox(height: 40),
+
+          ],       
         ),
       ),
+
+
         bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.green,
         selectedItemColor: Colors.white,
@@ -134,6 +142,10 @@ class PagLivro2 extends State<PagLivro>{
             case 1:
               Navigator.push(context, MaterialPageRoute(builder: (context) => const Categoria())); // Caminho pra tela "Categoria"
             break;
+
+            case 2:
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Central())); // Caminho pra tela "Categoria"
+            break;
           }
           },
         items: const [
@@ -145,11 +157,16 @@ class PagLivro2 extends State<PagLivro>{
             icon: Icon(Icons.grid_view),
             label: '',
           ),
+           BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: '',
+          ),
         ],
       ),
     );
   }
 }
+
 class SectionTitle extends StatelessWidget {
   final String title;
   const SectionTitle({super.key, required this.title});
@@ -193,16 +210,16 @@ class BooksGrid2 extends State<BooksGrid> {
     'Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito. Mas não precisa ser assim.'),
     
     Livro(image: 'imagem/img2.png', title: 'A Segunda era das Máquinas', preco:'R\$ 490,00',  
-    edi: 'AltaBooks', isbn: '9788576089148', pag: '352', idioma: 'Português', 
+    edi: 'Alta Books', isbn: '9788576089148', pag: '352', idioma: 'Português', 
     desc: 
     'Em A Segunda Era das Máquinas, Erik Brynjolfsson e Andrew McAfee, do MIT, ― dois pensadores à frente de seu campo' 
     '― revelam as forças que promovem a reinvenção de nossas vidas e de nossa economia.' 
     'Conforme todo o impacto das tecnologias digitais for sentido,'
     'perceberemos uma riqueza imensa na forma de tecnologias pessoais,'
-    'infraestrutura avançada e acesso quase sem fronteiras aos itens culturais que enriquecem nossas vidas.'),
+    'infraestrutura avançada e acesso quase sem fronteiras aos itens culturais que enriquecem nossas vidas'),
     
     Livro(image: 'imagem/img3.png', title: 'Como Criar Uma Mente', preco: 'R\$ 67,45',  
-    edi: 'EditoraAleph', isbn: '9788576571698', pag: '400', idioma: 'Português', 
+    edi: 'Editora Aleph', isbn: '9788576571698', pag: '400', idioma: 'Português', 
     desc: 
     'Neste livro, Ray Kurzweil dá um salto em relação às pesquisas sobre IA.'
     'Ao discutir as tecnologias que permitirão ampliar muitíssimo os poderes da nossa mente'
@@ -246,7 +263,7 @@ class BooksGrid2 extends State<BooksGrid> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [ 
-                //const Icon(Icons.book, color: Colors.white, size: 50),
+
                 Image.asset(Livro.image,
                 height: 100,
                 width: 100,
@@ -262,6 +279,7 @@ class BooksGrid2 extends State<BooksGrid> {
                   style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
                 ), 
                 const SizedBox(height: 10), 
+                
                 TextButton(
                           style: TextButton.styleFrom(
                               foregroundColor: Colors.white,
