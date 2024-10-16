@@ -79,7 +79,7 @@ class Categoria2 extends State<Categoria> {
           ),
           const SizedBox(height: 10),
  Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 16.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
@@ -110,7 +110,7 @@ class Categoria2 extends State<Categoria> {
           ),
           const SizedBox(height: 10),
  Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 75.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 70.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
@@ -183,7 +183,7 @@ class Categoria2 extends State<Categoria> {
 
               const SizedBox(height: 10),
  Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 55.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
@@ -216,7 +216,7 @@ class Categoria2 extends State<Categoria> {
           const SizedBox(height: 10),
 
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 80.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 85.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
@@ -241,7 +241,7 @@ class Categoria2 extends State<Categoria> {
           ),
           const SizedBox(height: 10),
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 49.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
@@ -266,7 +266,7 @@ class Categoria2 extends State<Categoria> {
           ),
           const SizedBox(height: 10),
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 33.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
@@ -291,7 +291,7 @@ class Categoria2 extends State<Categoria> {
           ),
        const SizedBox(height: 10),
         Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 42.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
@@ -316,7 +316,7 @@ class Categoria2 extends State<Categoria> {
           ),
           const SizedBox(height: 10),
         Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
@@ -341,7 +341,7 @@ class Categoria2 extends State<Categoria> {
           ),
 const SizedBox(height: 10),
         Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas

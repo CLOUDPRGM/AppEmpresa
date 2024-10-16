@@ -1,4 +1,5 @@
 import 'package:app_tcc/categoria.dart';
+import 'package:app_tcc/central.dart';
 import 'package:app_tcc/main.dart';
 import 'package:app_tcc/paglivro.dart';
 import 'package:flutter/material.dart';
@@ -97,11 +98,7 @@ class DetalheLivro2 extends State<DetalheLivro> {
           title: const Text('Deseja Saber Mais?'),
           content: const Text('Para saber mais dirija-se ao nosso site!'),
           actions: <Widget>[
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'Cancel'),
-              child: const Text('Cancel'),
-            ),
-            TextButton(
+                   TextButton(
                onPressed: () async {
                               const url = 'https://maps.app.goo.gl/L3J5WbzXL8fLYm3r6';
                               if (await canLaunchUrlString(url)) {
@@ -110,9 +107,12 @@ class DetalheLivro2 extends State<DetalheLivro> {
                                 throw 'Could not launch $url';
                               }
                             },
-
               child: const Text('Ir para o Site'),
             ),
+            TextButton(
+              onPressed: () => Navigator.pop(context, 'Cancel'),
+              child: const Text('Cancel'),
+            ), 
           ],
         ),
       ),
@@ -199,8 +199,9 @@ const Row(
     const SizedBox(height:40),
     Row(
       children: <Widget>[
-        Expanded(child: Text( liv.desc, textAlign: TextAlign.justify,
+        Expanded(child: Padding(padding: const EdgeInsets.all(16.0), child: Text( liv.desc, textAlign: TextAlign.justify, 
         style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+        ),
       ]
     ),
 const SizedBox(height: 40),
@@ -224,6 +225,10 @@ const SizedBox(height: 40),
            case 1:
              Navigator.push(context, MaterialPageRoute(builder: (context) => const Categoria())); // Caminho pra tela "Categoria"
            break;
+
+            case 2:
+             Navigator.push(context, MaterialPageRoute(builder: (context) => const Central())); // Caminho pra tela "Categoria"
+           break;
          }
          },
                 items: const [
@@ -235,6 +240,11 @@ const SizedBox(height: 40),
            icon: Icon(Icons.grid_view),
            label: '',  
          ),
+          BottomNavigationBarItem(
+           icon: Icon(Icons.person),
+           label: '',  
+         ),
+
                 ],
               ),
         ),

@@ -65,7 +65,8 @@ class DevReadsApp extends StatelessWidget {
 
   @override
   State<PagLivro> createState() => PagLivro2();
- } 
+
+} 
 
 class PagLivro2 extends State<PagLivro>{
 
@@ -118,8 +119,7 @@ class PagLivro2 extends State<PagLivro>{
               const BooksGrid(),
               const SectionTitle(title: 'LIVROS DA SEMANA'),
               const BooksGrid(),
-
-             const SizedBox(height: 40),
+              const SizedBox(height: 40),
 
           ],       
         ),
@@ -205,27 +205,17 @@ class BooksGrid2 extends State<BooksGrid> {
     Livro(image: 'imagem/img1.png', title: 'Codigo Limpo', preco:'R\$ 85,00', 
     edi: 'AltaBooks', isbn: '9788576082675', pag: '425', idioma: 'Português', 
     desc:
-    'Mesmo um código ruim pode funcionar. Mas se ele não for limpo,'
-    'pode acabar com uma empresa de desenvolvimento.'
-    'Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito. Mas não precisa ser assim.'),
+    'Mesmo um código ruim pode funcionar. Mas se ele não for limpo, pode acabar com uma empresa de desenvolvimento. Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito. Mas não precisa ser assim.'),
     
     Livro(image: 'imagem/img2.png', title: 'A Segunda era das Máquinas', preco:'R\$ 490,00',  
     edi: 'Alta Books', isbn: '9788576089148', pag: '352', idioma: 'Português', 
     desc: 
-    'Em A Segunda Era das Máquinas, Erik Brynjolfsson e Andrew McAfee, do MIT, ― dois pensadores à frente de seu campo' 
-    '― revelam as forças que promovem a reinvenção de nossas vidas e de nossa economia.' 
-    'Conforme todo o impacto das tecnologias digitais for sentido,'
-    'perceberemos uma riqueza imensa na forma de tecnologias pessoais,'
-    'infraestrutura avançada e acesso quase sem fronteiras aos itens culturais que enriquecem nossas vidas'),
+    'Em A Segunda Era das Máquinas, Erik Brynjolfsson e Andrew McAfee, do MIT, ― dois pensadores à frente de seu campo ― revelam as forças que promovem a reinvenção de nossas vidas e de nossa economia. Conforme todo o impacto das tecnologias digitais for sentido, perceberemos uma riqueza imensa na forma de tecnologias pessoais, infraestrutura avançada e acesso quase sem fronteiras aos itens culturais que enriquecem nossas vidas.'),
     
     Livro(image: 'imagem/img3.png', title: 'Como Criar Uma Mente', preco: 'R\$ 67,45',  
     edi: 'Editora Aleph', isbn: '9788576571698', pag: '400', idioma: 'Português', 
     desc: 
-    'Neste livro, Ray Kurzweil dá um salto em relação às pesquisas sobre IA.'
-    'Ao discutir as tecnologias que permitirão ampliar muitíssimo os poderes da nossa mente'
-    'e a criação de uma superinteligência revolucionária, Como criar uma mente dá outra dimensão ao debate científico,'
-    'projetando um futuro impressionante para a interação entre homem e máquina.'),
-
+    'Neste livro, Ray Kurzweil dá um salto em relação às pesquisas sobre IA. Ao discutir as tecnologias que permitirão ampliar muitíssimo os poderes da nossa mentee a criação de uma superinteligência revolucionária, Como criar uma mente dá outra dimensão ao debate científico, projetando um futuro impressionante para a interação entre homem e máquina.'),
 
   ];
   @override
