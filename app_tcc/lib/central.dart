@@ -38,16 +38,16 @@ class Central2 extends State<Central> {
           child: Column(
                    //Alinhamento centralizado
                     children: <Widget>[  
-                      Image.asset('imagem/logo.png', color: Colors.white),    
                         const Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 16.0),
-                        ),
-             const Text('Central de Atendimento',
-                style: TextStyle(fontSize: 20, color: Colors.white,  
+              padding:  EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
+                        
+             child: Text('Central de Atendimento', textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 40, color: Colors.white,  
                 fontWeight: FontWeight.bold
                 ),
                ),
-           const SizedBox(height:20),
+                        ),
+           const SizedBox(height:100),
              Container(
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 80.0),
             decoration: BoxDecoration(
@@ -74,7 +74,7 @@ class Central2 extends State<Central> {
                ]
             ),
           ),
-                const SizedBox(height:20),
+                const SizedBox(height:50),
              Container(
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
             decoration: BoxDecoration(
@@ -101,7 +101,7 @@ class Central2 extends State<Central> {
                ]
             ),
           ),
-                const SizedBox(height:20),
+                const SizedBox(height:50),
              Container(
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 70.0),
             decoration: BoxDecoration(

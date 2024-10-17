@@ -216,7 +216,7 @@ class Categoria2 extends State<Categoria> {
           const SizedBox(height: 10),
 
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 85.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 68.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
@@ -229,7 +229,7 @@ class Categoria2 extends State<Categoria> {
     mainAxisSize: MainAxisSize.min, 
     children: [
             Text(
-              'Gestão de TI',
+              'Identidade Visual',
               style: TextStyle(
                 fontSize: 16.0,
                 color: Colors.white, fontWeight: FontWeight.bold // cor do texto
@@ -241,7 +241,7 @@ class Categoria2 extends State<Categoria> {
           ),
           const SizedBox(height: 10),
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 49.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 95.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
@@ -254,7 +254,7 @@ class Categoria2 extends State<Categoria> {
     mainAxisSize: MainAxisSize.min, 
     children: [
             Text(
-              'Hardware e Periféricos',
+              'Hardware',
               style: TextStyle(
                 fontSize: 16.0,
                 color: Colors.white, fontWeight: FontWeight.bold // cor do texto
@@ -266,7 +266,7 @@ class Categoria2 extends State<Categoria> {
           ),
           const SizedBox(height: 10),
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 33.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 43.0),
             decoration: BoxDecoration(
               color: Colors.transparent, // cor de fundo, pode ser transparente
               borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
@@ -279,7 +279,7 @@ class Categoria2 extends State<Categoria> {
     mainAxisSize: MainAxisSize.min, 
     children: [
             Text(
-              'Gerenciamento de Projetos',
+              'Tecnologia e Sociedade',
               style: TextStyle(
                 fontSize: 16.0,
                 color: Colors.white, fontWeight: FontWeight.bold // cor do texto
@@ -289,82 +289,7 @@ class Categoria2 extends State<Categoria> {
                ]
             ),
           ),
-       const SizedBox(height: 10),
-        Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 42.0),
-            decoration: BoxDecoration(
-              color: Colors.transparent, // cor de fundo, pode ser transparente
-              borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
-              border: Border.all(
-                color: Colors.green, // cor da borda
-                width: 2.0, // largura da borda
-              ),
-            ),
-            child:  const Column(
-    mainAxisSize: MainAxisSize.min, 
-    children: [
-            Text(
-              'Tecnologias Emergêntes',
-              style: TextStyle(
-                fontSize: 16.0,
-                color: Colors.white, fontWeight: FontWeight.bold // cor do texto
-              ),
-            ),
-            
-               ]
-            ),
-          ),
-          const SizedBox(height: 10),
-        Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
-            decoration: BoxDecoration(
-              color: Colors.transparent, // cor de fundo, pode ser transparente
-              borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
-              border: Border.all(
-                color: Colors.green, // cor da borda
-                width: 2.0, // largura da borda
-              ),
-            ),
-            child:  const Column(
-    mainAxisSize: MainAxisSize.min, 
-    children: [
-            Text(
-              'Tecnologias e Sociedade',
-              style: TextStyle(
-                fontSize: 16.0,
-                color: Colors.white, fontWeight: FontWeight.bold // cor do texto
-              ),
-            ),
-            
-               ]
-            ),
-          ),
-const SizedBox(height: 10),
-        Container(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-            decoration: BoxDecoration(
-              color: Colors.transparent, // cor de fundo, pode ser transparente
-              borderRadius: BorderRadius.circular(8.0), // bordas arredondadas
-              border: Border.all(
-                color: Colors.green, // cor da borda
-                width: 2.0, // largura da borda
-              ),
-            ),
-            child:  const Column(
-    mainAxisSize: MainAxisSize.min, 
-    children: [
-            Text(
-              'Certificações e Treinamento',
-              style: TextStyle(
-                fontSize: 16.0,
-                color: Colors.white, fontWeight: FontWeight.bold // cor do texto
-              ),
-            ),
-        
-               ]
-            ),
-          ),      
-            
+      
 
 const SizedBox(height: 40),
         ],   
