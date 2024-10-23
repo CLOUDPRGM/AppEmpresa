@@ -55,7 +55,9 @@ class Pagini extends StatefulWidget {
                
                //Formulário para preencher o nome
                const SizedBox(height: 40),
-               TextFormField(
+               Padding( 
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+               child: TextFormField(
                   style: const TextStyle(color: Colors.black, fontSize: 15 ),
                 decoration: const InputDecoration(
                   contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 10), // Set content padding to 8 vertical, 12 horizontal
@@ -81,6 +83,7 @@ class Pagini extends StatefulWidget {
                             nme = value;
                           },
               ),
+               ),
              
              //Botão para enviar os dados
              const SizedBox(height: 40),

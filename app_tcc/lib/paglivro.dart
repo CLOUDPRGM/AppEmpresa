@@ -217,6 +217,22 @@ class BooksGrid2 extends State<BooksGrid> {
     desc: 
     'Neste livro, Ray Kurzweil dá um salto em relação às pesquisas sobre IA. Ao discutir as tecnologias que permitirão ampliar muitíssimo os poderes da nossa mentee a criação de uma superinteligência revolucionária, Como criar uma mente dá outra dimensão ao debate científico, projetando um futuro impressionante para a interação entre homem e máquina.'),
 
+    Livro(image: 'imagem/img4.jpg', title: 'A Guerra Das Inteligências Na Era Do Chatgpt', preco: 'R\$ 98,00',  
+    edi: 'Editora Gente', isbn: '9788545207481', pag: '400', idioma: 'Português', 
+    desc: 
+    'Este livro de Laurent Alexandre é um alarme eficaz. Ele soa em momentos cruciais: o trabalho, a escola, a política, a democracia, a psicopatologia, a cura da morte, a religião, o colapsismo, os ambientalistas, a algoritmocracia, a neurobiologia, as disparidades de inteligência, a nova ética, enfim, a aventura humana no século XXI.'),
+
+    Livro(image: 'imagem/img5.jpg', title: 'Manual de Produção de Jogos Digitais', preco: 'R\$ 340,00',  
+    edi: 'Visual Books', isbn: '9788540701830', pag: '508', idioma: 'Português', 
+    desc: 
+    'São apresentados tópicos gerais como: pré-produção, testes e liberação do código, bem como tópicos específicos como: gravações de voiceover e motioncapture, tradução e localização e fornecedores externos. Depoimentos de especialistas da indústria discutem experiências de profissionais da área e dão exemplos de situações reais. Ao final do livro, um projeto de jogo fictício ilustra em detalhes o ciclo de produção, a documentação e muitos outros conceitos do desenvolvimento de jogos digitais.'),
+
+    Livro(image: 'imagem/img6.jpg', title: 'O Verdadeiro Valor de ti', preco: 'R\$ 99,00',  
+    edi: 'MBooks', isbn: '9788576801047', pag: '248', idioma: 'Português', 
+    desc: 
+    'Como Transformar TI de um Centro de Custos em um Centro de Valor e Competitividade Se esta parece ser a situação na sua empresa, considere este livro como um chamado para despertar para a vida. De acordo com os pesquisadores em TI e autores Richard Hunter e George Westerman, a questão não é o custo - é a comunicação. Resumindo, as empresas que conseguem comunicar eficazmente o valor de TI, conseguem criar mais valor para TI. Quando os executivos tornam o desempenho e as decisões de TI transparentes, todos - dos peritos tecnológicos sazonais aos funcionários não técnicos - conseguem entender melhor suas funções no uso e administração de TI.'),
+
+
   ];
   @override
   void initState(){
@@ -245,6 +261,23 @@ class BooksGrid2 extends State<BooksGrid> {
            final Livro = livros[index]; 
            //Aqui onde o App acessará os livros na classe
           return
+          GestureDetector(
+              onTap: () {
+               
+                 Livro2 liv = Livro2(image: Livro.image, title: Livro.title, preco: Livro.preco, edi: Livro.edi,
+                             isbn: Livro.isbn, pag: Livro.pag, idioma: Livro.idioma, desc: Livro.desc);
+            
+                         Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>   const DetalheLivro(),
+                                  settings: RouteSettings(arguments: liv)),
+                            );
+                setState(() {
+                  // Toggle light when tapped.
+                
+                });},
+              child: 
           Container( //Retornar para aparecer na tela
             decoration: BoxDecoration(
               color: Colors.white24,
@@ -262,36 +295,20 @@ class BooksGrid2 extends State<BooksGrid> {
                 Text(
                   textAlign: TextAlign.center,
                   Livro.title, //Pega o título
-                  style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
+                  style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
                 ),
-               Text(
+               const SizedBox(height: 10), 
+               Text(        
                   Livro.preco, //Pega o preço
-                  style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
+                  style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
                 ), 
-                const SizedBox(height: 10), 
-                
-                TextButton(
-                          style: TextButton.styleFrom(
-                              foregroundColor: Colors.white,
-                              textStyle:
-                                  const TextStyle(fontWeight: FontWeight.bold)),
-                          child:
-                              const Text('Detalhes do Livro'),
-                          onPressed: () {    
-                           
-                            Livro2 liv = Livro2(image: Livro.image, title: Livro.title, preco: Livro.preco, edi: Livro.edi,
-                             isbn: Livro.isbn, pag: Livro.pag, idioma: Livro.idioma, desc: Livro.desc);
-            
-                         Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>   const DetalheLivro(),
-                                  settings: RouteSettings(arguments: liv)),
-                            );
-                          },
+                const SizedBox(height: 5), 
+                const Text( 'Clique para mais',  
+                style: TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),       
                         ),
               ],
-            ),  
+            ), 
+          ), 
           );
         },
       ),

@@ -41,7 +41,7 @@ class Central2 extends State<Central> {
                         const Padding(
               padding:  EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
                         
-             child: Text('Central de Atendimento', textAlign: TextAlign.center,
+             child: Text('Central de Atendimento', textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: 40, color: Colors.white,  
                 fontWeight: FontWeight.bold
                 ),
@@ -61,7 +61,6 @@ class Central2 extends State<Central> {
             child:   Column(
     mainAxisSize: MainAxisSize.min, 
     children: [
-            
             Image.asset('imagem/atend.png'),
             const Text(
               'TELEFONE SAC',
