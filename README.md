@@ -1,7 +1,7 @@
 # Aplicativo do Cliente - DevReads
 App feito no Flutter utilizando Dart
 
-[Vídeo demonstrando o funcionamento do aplicativo][https://drive.google.com/file/d/141lOgj87gUiYejuwJmdOKS54WSqzsBYY/view?usp=drive_link]
+[Vídeo demonstrando o funcionamento do aplicativo] - [https://drive.google.com/file/d/141lOgj87gUiYejuwJmdOKS54WSqzsBYY/view?usp=drive_link]
 
 # DevReads 📚💻
 
