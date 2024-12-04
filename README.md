@@ -1,6 +1,14 @@
 # Aplicativo do Cliente - DevReads
 App feito no Flutter utilizando Dart
 
+#Integrantes - 
+
+Guilherme Gasperini Valente
+Gustavo Henrique da Silva Souza
+Matheus Damasceno Ramos dos Santos
+Moisés dos Santos Cruz
+Yasmim Pereira da Costa
+
 [Vídeo demonstrando o funcionamento do aplicativo] - [https://drive.google.com/file/d/141lOgj87gUiYejuwJmdOKS54WSqzsBYY/view?usp=drive_link]
 
 # DevReads 📚💻
