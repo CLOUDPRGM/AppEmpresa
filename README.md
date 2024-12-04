@@ -3,6 +3,7 @@ App feito no Flutter utilizando Dart
 
 # Integrantes
 
+- Ana Beatriz Abreu dos Santos
 - Guilherme Gasperini Valente
 - Gustavo Henrique da Silva Souza
 - Matheus Damasceno Ramos dos Santos
