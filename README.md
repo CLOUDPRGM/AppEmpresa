@@ -1,7 +1,7 @@
 # Aplicativo do Cliente - DevReads
 App feito no Flutter utilizando Dart
 
-#Integrantes - 
+# Integrantes
 
 - Guilherme Gasperini Valente
 - Gustavo Henrique da Silva Souza
